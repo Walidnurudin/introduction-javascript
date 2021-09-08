@@ -1,14 +1,14 @@
-const printSegitiga = 10;
+const printSegitiga = 5;
 
-if(typeof printSegitiga != "number" && printSegitiga !== 0){
+if(typeof printSegitiga != "number"){
     console.log("Data harus number")
 }else{
-    const result = "";
-    for (let i = 0; i < printSegitiga; i++) {
-        for (let j = 0; j < printSegitiga; j++) {
-            
+    let result = "";
+    for (let i = printSegitiga; i > 0; i--) {
+        for (let j = 0; j < i; j++) {
+            result += i
         }
-        
+        result += "\n"
     }
     console.log(result)
 }
