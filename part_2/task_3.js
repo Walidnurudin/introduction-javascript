@@ -14,10 +14,14 @@ function seleksiNilai(nilaiAwal, nilaiAkhir, dataArray){
         }
     })
 
+    if(result.length === 0){
+        return "Nilai tidak ditemukan"
+    }
+
     result.sort((a, b) => a - b)
 
     return result;
 
 }
 
-console.log(seleksiNilai(5, 20, [5, 2, 10, 5, 20]))
+console.log(seleksiNilai(1, 4, [5, 30, 10, 5, 20]))

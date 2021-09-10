@@ -22,4 +22,4 @@ function limitData(data, limit){
     console.log(result);
 }
 
-searchName("an", 3, limitData)
+searchName("an", 3, limitData);
