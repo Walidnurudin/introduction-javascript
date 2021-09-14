@@ -11,12 +11,10 @@ const getMonth = (callback) => {
     }, 4000)
 }
 
-const showMonth = (err, data) => {
+getMonth((err, data) => {
     if (err) {
-        return console.log(err);
+        return console.log(err.message);
     }
-    
-    return data.map(item => console.log(item));
-}
 
-getMonth(showMonth)
+    return data.map(item => console.log(item));
+})

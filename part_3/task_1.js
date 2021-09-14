@@ -15,20 +15,24 @@ const cekhariKerja = (day) => {
     })
 }
 
-// THEN CATCH
+// THEN CATCH 
+// untuk mengatasi error pada promise. then untuk mengolah hasil resolve dan catch untuk mengolah hasil reject.
+
 cekhariKerja('selasa')
     .then(res => console.log(res))
     .catch(err => console.log(err.message))
 
 
-// TRY CATCH
-async function cek(){
+// TRY CATCH 
+// untuk mengatasi error pada async/await. blok try akan akan mengeksekusi dan blok catch akan dieksekusi jika blok try gagal/error.
+
+async function cek(day){
     try {
-        const result = await cekhariKerja('sabtu');
+        const result = await cekhariKerja(day);
         console.log(result)
     } catch (error) {
         console.log(error.message)
     }    
 }
 
-cek()
+cek("selasa")
