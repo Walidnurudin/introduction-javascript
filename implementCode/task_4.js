@@ -18,8 +18,9 @@ const divideAndSort = (num) => {
     })
 
     let result = res2.join('');
+    result = parseInt(result)
 
-    return parseInt(result);
+    return result
 }
 
 console.log(divideAndSort(5956560159466056));
