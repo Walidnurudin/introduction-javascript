@@ -9,7 +9,11 @@ const divideAndSort = (num) => {
         return "Tipe data harus berupa angka";
     }
 
+    // console.log(BigInt(num))
+
     let res = num.toString().split(0);
+
+    console.log(res)
 
     let res2 = [];
     res.map(item => {
@@ -23,4 +27,4 @@ const divideAndSort = (num) => {
     return result
 }
 
-console.log(divideAndSort(5956560159466056));
+console.log(divideAndSort(32105409010205));

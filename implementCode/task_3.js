@@ -3,19 +3,19 @@
 const arkFood = (harga, voucher, jarak, pajak) => {
     // VALIDASI
     if (typeof harga !== "number") {
-        return "Harga harus bertipe data 'number'";
+        return "Parameter harga harus bertipe data 'number'";
     }
 
     if (typeof voucher !== "string" && typeof voucher !== "boolean") {
-        return "Voucher harus bertipe data 'string/boolean'";
+        return "Parameter voucher harus bertipe data 'string/boolean'";
     }
 
     if (typeof jarak !== "number") {
-        return "jarak harus bertipe data number";
+        return "Parameter jarak harus bertipe data 'number'";
     }
 
     if (typeof pajak !== "boolean") {
-        return "Pajak harus bertipe data 'boolean'";
+        return "Parameter pajak harus bertipe data 'boolean'";
     }
 
     let data = {
@@ -50,6 +50,7 @@ const arkFood = (harga, voucher, jarak, pajak) => {
 
     // TOTAL
     data.subTotal = data.harga - data.potongan + data.pajak + data.biayaAntar;
+    
     return `
         Harga : ${data.harga}
         Potongan : ${data.potongan}
